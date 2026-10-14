@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Job Scheduler Monitor</title><link rel="stylesheet" href="style.css"></head>
+<body><main><header><div><p class="eyebrow">C++20 CONCURRENCY DEMO</p><h1>Job Scheduler</h1><p class="muted">Queue health, execution outcomes, and latency</p></div><span id="health" class="pill">Connecting…</span></header>
+<section class="metrics" id="metrics"></section>
+<section class="panel"><h2>Submit a job</h2><form id="jobForm"><label>Job name<input id="name" value="report-generation" maxlength="100" required></label><label>Priority<input id="priority" type="number" min="0" max="100" value="5"></label><label>Simulated failures<input id="failures" type="number" min="0" max="5" value="0"></label><button>Queue job</button></form><p id="message" class="muted"></p></section>
+<section class="panel"><div class="section-head"><h2>Recent jobs</h2><button id="refresh" class="secondary">Refresh</button></div><div class="table-wrap"><table><thead><tr><th>ID</th><th>Job</th><th>Priority</th><th>Status</th><th>Updated</th><th>Error</th></tr></thead><tbody id="jobs"></tbody></table></div></section>
+<footer>Local demo API · SQLite persistence · Fixed-size worker pool</footer></main><script src="app.js"></script></body></html>
